@@ -14,6 +14,13 @@ export class UserService {
    getAll(): Observable<User[]> {
      return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users' , );
    }
+  //  getAll(): Observable<User[]> {
+  //   const url = 'https://jsonplaceholder.typicode.com/users';
+  //   return this.http.get<User[]>(url).pipe(
+  //     catchError(this.handleError<User[]>('getAll', []))
+  //   );
+  // }
+  
 
   //  getOne(id: number): Observable<User> {
   //    return this.http.get<User>('http://127.0.0.1:8000/users/' + id);

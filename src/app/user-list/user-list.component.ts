@@ -46,7 +46,7 @@ export class UserListComponent {
   }
 
   editUser(user: User): void {
-    console.log('Edit user:', user);
+    // console.log('Edit user:', user);
     this.openDialog(user);
   }
 }
