@@ -5,6 +5,7 @@ import { User } from '../models/User';
 import { MatDialogModule, MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { UserFormComponent } from '../user-form/user-form.component';
 import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
@@ -17,7 +18,8 @@ export class UserListComponent {
 
   constructor(
     private userService: UserService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router
   ) {
     console.log('UserListComponent initialized');
   }
@@ -48,5 +50,6 @@ export class UserListComponent {
   editUser(user: User): void {
     // console.log('Edit user:', user);
     this.openDialog(user);
+    // this.router.navigate(['login']);
   }
 }
